@@ -1,11 +1,9 @@
-FROM node:14
+FROM node:latest
 
-WORKDIR /
-
-COPY package*.json server.js
+COPY . .
 
 RUN npm install
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["node", "src/server.js"]
