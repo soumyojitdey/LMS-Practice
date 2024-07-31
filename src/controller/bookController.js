@@ -5,6 +5,7 @@ exports.getAllBooks = async (req, res) => {
     try{
 
         const books = Book.find({})
+        console.log("Books: ", books);
         res.status(200).json(books);
 
     }catch(e){
